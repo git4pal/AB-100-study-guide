@@ -1,3 +1,5 @@
+## Introduction to agentic AI business solutions
+
 ### AI Architect Responsibilities
 
 | Responsibility | Description |
@@ -56,50 +58,3 @@
   - Transparency
   - Accountability
 - Leverage cloud scalability for enterprise-wide adoption.
-
-## Key Activities
-
-### Role of Agents in Task Automation
-
-- Draft documents, emails, or responses based on context.
-- Summarize large volumes of data such as emails, meetings, and chats.
-- Automate workflows using Microsoft 365, Copilot Studio, Azure Foundry, and Power Platform.
-- Trigger multi-step processes including approvals, notifications, and content generation.
-- Reduce cognitive load to focus teams on strategic work.
-
-### Agents in Data Analytics
-
-- Simplify and accelerate data analysis by converting natural language questions into insights.
-- Summarize complex datasets into actionable insights.
-- Identify trends, outliers, and patterns.
-- Generate visualizations on demand.
-- Interpret dashboards and suggest next-step actions.
-- Enable employees to understand data without advanced analytics skills.
-
-### Agents in Decision-Making
-
-- Support **strategic and operational decisions** with AI inputs.
-- Provide **scenario recommendations** based on historical data.
-- Identify **risks** through pattern recognition.
-- Summarize **business context** from documents, meetings, and datasets.
-- Offer **recommendations** backed by enterprise knowledge.
-
-> **Outcome:** Enables leaders to explore alternatives and evaluate impacts confidently.
-
-## Best Practices
-
-### Using AI Agents Effectively and Responsibly
-
-- **Start with the business outcome** you want to improve.
-- **Use agent automation** to reduce repetitive work, not replace critical thinking.
-- **Maintain responsible AI principles:**
-  - Fairness
-  - Reliability and Safety
-  - Privacy and Security
-  - Inclusiveness
-  - Transparency
-  - Accountability
-- **Monitor performance** and refine prompts, workflows, and data inputs.
-- **Empower teams** with training to use Copilot effectively.
-
-> **Outcome:** These principles reinforce reliable, secure AI adoption at scale.
