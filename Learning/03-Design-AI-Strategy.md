@@ -52,7 +52,7 @@
 ### Azure Governance
 ![Azure Governance](/images/microsoft-governance.png)
 
-### Understanding the Role of AI Agents in Business Solutions
+## Understanding the Role of AI Agents in Business Solutions
 
 - **AI agents** automate tasks, synthesize information, trigger workflows, and execute complex multi-step logic.
 
@@ -99,6 +99,8 @@ These capabilities can serve as benchmarks when designing and deploying AI-power
 | **Typical Examples** | Microsoft 365 Copilot, Dynamics 365 Copilots | Custom Copilot Studio agents | Azure AI Foundry agents, multi-agent systems, custom RAG applications | Containerized LLMs, open-source models on AKS, Azure Container Apps, VM-based deployments |
 | **When to Choose** | Need immediate business productivity with minimal customization | Need rapid business process automation with low-code development | Need enterprise-grade custom AI solutions and sophisticated orchestration | Need complete control over models, infrastructure, networking, or compliance boundaries |
 
+## Multi Agent Solution
+
 ### Agent Orchestration Patterns
 
 | Orchestration Pattern | Description | Typical Flow / Behavior | Best Used For |
@@ -137,7 +139,7 @@ These capabilities can serve as benchmarks when designing and deploying AI-power
 | **Business Workflow Agent** | **Copilot Studio** | Rapid iteration, prebuilt connectors, governance guardrails, and low-code customization | Sequential, Handoff |
 | **Integration / Orchestration Agent** | **Microsoft Foundry** | Pro-code tools, complex workflows, custom evaluations, enterprise integrations, and advanced orchestration | Concurrent, Sequential, Magnetic |
 
-## Platform Selection Summary
+### Platform Selection Summary
 
 | Scenario | Recommended Platform |
 |-----------|---------------------|
@@ -145,7 +147,7 @@ These capabilities can serve as benchmarks when designing and deploying AI-power
 | Automate business processes with low-code development | Copilot Studio |
 | Build enterprise-grade AI systems with complex workflows and integrations | Microsoft Foundry |
 
-## Orchestration Alignment
+### Orchestration Alignment
 
 | Orchestration Pattern | Most Common Platform |
 |----------------------|----------------------|
@@ -191,7 +193,7 @@ These agents simplify everyday tasks such as:
 
 > **Key Takeaway:** Prebuilt Microsoft 365 Copilot agents provide immediate business value by helping users work more efficiently within familiar Microsoft 365 applications, without requiring custom development.
 
-## Identifying High Value Use Cases
+### Identifying High Value Use Cases
 
 Solution architects determine candidate use cases by analyzing
 
@@ -220,7 +222,7 @@ https://adoption.microsoft.com/en-us/scenario-library/
 
 - **Productivity Workflows:** Automate communication, meetings, and follow-ups to boost efficiency
 
-## Comparison: Generative Orchestration vs Classic Orchestration
+### Comparison: Generative Orchestration vs Classic Orchestration
 
 | Behavior | Generative Orchestration | Classic Orchestration |
 |----------|--------------------------|-----------------------|
@@ -232,8 +234,10 @@ https://adoption.microsoft.com/en-us/scenario-library/
 | **Asking Users for Input** | Agent automatically generates questions to prompt users for missing information. | Must use question nodes in topics to prompt users. |
 | **Responding to a User** | Agent automatically generates a response using available information. | Must use message nodes in topics or call a tool. |
 
+## Copilot Studio
+Copilot Studio provides a **low-code environment** for building task and retrieval agents, enabling rapid design cycles and controlled extensibility. It imposes constraints through managed connectors, responsible AI boundaries, and simplified orchestration.
 
-## Knowledge Sources in Copilot Studio
+### Knowledge Sources in Copilot Studio
 
 | Knowledge Source | Description | Typical Use Cases |
 |------------------|-------------|-------------------|
@@ -243,3 +247,156 @@ https://adoption.microsoft.com/en-us/scenario-library/
 | **Dataverse Knowledge** | Answer specific queries using structured relational data stored in Dataverse. | Business applications, CRM data, case management, operational data |
 | **Enterprise Connectors** | Access content from connected systems such as OneDrive, Salesforce, ServiceNow, and other enterprise platforms. | Cross-system knowledge retrieval, business process automation, enterprise integrations |
 | **Azure OpenAI Connected Data** | Combine vector search and model reasoning to provide deeper contextual understanding and grounded responses. | RAG (Retrieval-Augmented Generation), semantic search, advanced AI assistants, knowledge discovery |
+
+## Define solution rules and constraints for AI components
+
+### Architectural Foundations and Platform Roles
+
+| Solution / Platform | Key Constraints | Solution Rules |
+|---------------------|----------------|----------------|
+| **Microsoft 365 Copilot** | • Limited to Microsoft 365 security boundaries and permissions<br>• Uses organizational data through Microsoft Graph<br>• Primarily focused on productivity scenarios<br>• Customization is more constrained than custom-built agents | • Respect existing Microsoft 365 permissions<br>• Ground responses using approved organizational content<br>• Follow Responsible AI principles<br>• Restrict access to sensitive data based on user entitlements |
+| **Copilot Studio** | • Low-code platform capabilities<br>• Dependent on available connectors and supported integrations<br>• Bound by Dataverse, environment, and governance policies<br>• Best suited for business workflow automation and guided experiences | • Define topics, triggers, instructions, and orchestration logic<br>• Establish escalation paths and approval workflows<br>• Control which actions can be executed automatically<br>• Define allowed knowledge sources and business processes |
+| **Microsoft Foundry (Azure AI Foundry)** | • Requires AI engineering and governance practices<br>• Subject to model quotas, deployment limits, and service availability<br>• Requires implementation of security, monitoring, and lifecycle management<br>• Higher complexity than low-code solutions | • Define system prompts, agent behavior, and orchestration patterns<br>• Specify approved models and grounding sources<br>• Establish evaluation, monitoring, and safety controls<br>• Define human-in-the-loop requirements for critical decisions |
+| **GPUs & Containers (Custom AI Infrastructure)** | • Customer responsible for infrastructure, scaling, security, patching, and monitoring<br>• Requires MLOps/GenAIOps capabilities<br>• Higher operational complexity and cost<br>• Compliance and availability are customer-managed | • Define model hosting and deployment standards<br>• Enforce networking, security, and compliance requirements<br>• Specify model lifecycle and version management processes<br>• Establish operational guardrails and monitoring requirements |
+| **Azure AI Search / RAG Solutions** | • Quality depends on data freshness, chunking, indexing, and retrieval strategy<br>• Retrieval performance depends on index design and embeddings<br>• Access controlled by identity and authorization settings | • Define authoritative knowledge sources<br>• Specify chunking, indexing, and refresh policies<br>• Control citation and grounding requirements<br>• Ensure responses are generated only from approved knowledge sources |
+| **Custom Models / Fine-Tuned Models** | • Require training datasets, evaluation frameworks, and monitoring<br>• Potential model drift over time<br>• Higher governance and maintenance requirements | • Define acceptable training data sources<br>• Establish evaluation metrics and success criteria<br>• Define retraining schedules and approval processes<br>• Apply Responsible AI and compliance reviews before deployment |
+| **Power Platform AI Solutions** | • Governed by Power Platform environments and DLP policies<br>• Connector limitations and licensing may apply<br>• Dataverse often acts as the underlying data platform | • Apply environment governance controls<br>• Define approved connectors and data flows<br>• Enforce DLP and compliance policies<br>• Define automation boundaries and user permissions |
+
+### Quick Exam Rule
+
+| Platform | Primary Rule Focus | Primary Constraint Focus |
+|-----------|-------------------|--------------------------|
+| **Microsoft 365 Copilot** | User permissions, data access, and productivity workflows | Microsoft 365 security boundaries and Microsoft Graph permissions |
+| **Copilot Studio** | Topics, actions, workflows, instructions, and business logic | Low-code platform capabilities, connector limitations, and environment policies |
+| **Microsoft Foundry** | Agent behavior, orchestration, prompts, evaluations, and model governance | Model quotas, service limits, security requirements, and operational complexity |
+| **GPUs & Containers** | Infrastructure standards, model lifecycle, security, and operational controls | Compute capacity, networking, compliance, infrastructure management, and cost |
+| **Azure AI Search / RAG** | Grounding policies, retrieval quality, citations, and knowledge source governance | Index design, chunking strategy, embedding quality, and data freshness |
+| **Custom Models** | Training governance, evaluations, monitoring, and retraining processes | Training data quality, model drift, lifecycle management, and compliance controls |
+| **Power Platform AI** | DLP policies, automation rules, approved connectors, and user permissions | Environment governance, licensing, connector availability, and Dataverse dependencies |
+
+## Extend Microsoft 365 Copilot vs Build a Custom Agent vs Create a Custom AI Model
+
+| Parameter | Extend Microsoft 365 Copilot | Build a Custom Agent | Create a Custom AI Model |
+|------------|-----------------------------|----------------------|--------------------------|
+| **Primary Goal** | Enhance user productivity within Microsoft 365 experiences | Automate business processes and execute business-specific workflows | Solve domain-specific AI problems requiring specialized intelligence |
+| **Typical Use Cases** | Summarization, drafting, Q&A, meeting insights, content creation | Workflow automation, approvals, case management, operational processes | Fraud detection, demand forecasting, predictive maintenance, medical diagnosis, custom classification |
+| **Business Focus** | User productivity | Process automation | Business intelligence and specialized AI capabilities |
+| **Autonomy** | Low | High | N/A (model provides predictions or reasoning, not workflows) |
+| **Workflow Complexity** | Simple interactions | Complex multi-step workflows | Typically embedded inside workflows or applications |
+| **Custom Logic** | Limited | Extensive | Learned from training data rather than explicit business rules |
+| **Data Sources** | Microsoft Graph and Microsoft 365 content | Any enterprise data source | Specialized training datasets and enterprise data |
+| **Knowledge Grounding** | Microsoft 365 organizational content | Enterprise-wide knowledge and systems | Training data, fine-tuning datasets, and domain-specific data |
+| **Reasoning Scope** | Productivity-focused assistance | Business-process reasoning and orchestration | Specialized domain reasoning and prediction |
+| **Actions** | Simple actions and integrations | Complex actions, approvals, transactions, and updates | Typically no direct actions; provides intelligence consumed by applications or agents |
+| **Orchestration** | None or implicit | Full agent orchestration | Requires external orchestration by applications or agents |
+| **Enterprise Integration** | Microsoft ecosystem | Cross-platform enterprise integrations | Integrated into applications, agents, or AI pipelines |
+| **Development Approach** | Configuration and extension | Agent design and development | Data science, model training, evaluation, and deployment |
+| **Required Skills** | Microsoft 365 administration and Copilot extensibility | Solution architecture, development, AI orchestration | Data science, machine learning, MLOps, model governance |
+| **Time to Value** | Fastest | Medium | Slowest |
+| **Data Requirements** | Existing Microsoft 365 content | Operational and enterprise data | Large quantities of high-quality training data |
+| **Infrastructure Complexity** | Low | Medium | High |
+| **Operational Overhead** | Low | Medium to High | High |
+| **Governance Requirements** | Built-in Microsoft governance | Custom governance and monitoring | Full model governance, monitoring, retraining, and compliance controls |
+| **Model Ownership** | Microsoft managed | Uses Microsoft or third-party foundation models | Organization owns or manages the model lifecycle |
+| **Cost Profile** | Lowest | Medium | Highest |
+| **Best Fit Scenario** | Improve how people work | Automate how work gets done | Create AI capabilities not available from existing models |
+| **Example** | Summarize recent customer emails and prepare a draft response | Create a customer case, validate data, route for approval, and notify stakeholders | Train a model to predict equipment failures before they occur |
+
+### Decision Guide
+
+| If the Requirement Is... | Recommended Approach |
+|--------------------------|---------------------|
+| Summarize, draft, search, or answer questions | Extend Copilot |
+| Improve employee productivity | Extend Copilot |
+| Work inside Teams, Outlook, Word, Excel, or PowerPoint | Extend Copilot |
+| Automate a multi-step workflow | Build a Custom Agent |
+| Execute business actions across systems | Build a Custom Agent |
+| Orchestrate multiple tools, APIs, or agents | Build a Custom Agent |
+| Predict future outcomes | Create a Custom AI Model |
+| Detect anomalies or fraud | Create a Custom AI Model |
+| Classify content using domain-specific criteria | Create a Custom AI Model |
+| Use proprietary business data to create unique intelligence | Create a Custom AI Model |
+| Require highly specialized industry expertise | Create a Custom AI Model |
+
+### Architecture Selection Shortcut
+
+| Question | Choose |
+|-----------|--------|
+| Need to help users work better? | Extend Copilot |
+| Need to automate a business process? | Build a Custom Agent |
+| Need AI to predict, classify, detect, or forecast something unique? | Create a Custom AI Model |
+
+### Exam Shortcut
+
+```text
+Extend Copilot
+  → Productivity
+  → Microsoft 365
+  → Summarize / Draft / Search
+
+Custom Agent
+  → Automation
+  → Orchestration
+  → Actions
+  → Multi-step Workflows
+
+Custom AI Model
+  → Predictions
+  → Classification
+  → Forecasting
+  → Domain Expertise
+  → Training Data
+```
+
+## SLM Use Cases
+
+### When to Use a Customized SLM vs a General LLM
+
+| Decision Factor | Use Customized SLM | Use General LLM |
+|----------------|-------------------|-----------------|
+| Domain specificity | High | Low |
+| Latency sensitivity | High | Medium/Low |
+| Cost constraints | High sensitivity | Moderate |
+| Data sovereignty required | Yes | Maybe |
+| Task complexity | Medium-High, specialized | High, general |
+| Deployment environment | Edge/IoT/onprem | Cloud |
+| Regulatory restrictions | High | Moderate |
+
+## AI Workload Role Matrix
+
+| Role | Purpose | Key Responsibilities | Risk if Missing |
+|------|---------|----------------------|-----------------|
+| **Executive Sponsor / Business Leader** | Provides strategic direction, secures funding, and removes organizational barriers. | • Align AI initiatives with business strategy and KPIs<br>• Champion cultural and operational change<br>• Approve governance frameworks and risk posture | Stalled adoption, lack of funding, and reduced organizational visibility. |
+| **AI Center of Excellence (AI CoE) Lead** | Coordinates AI strategy, ensures governance, and orchestrates organizational alignment. | • Facilitate collaboration across business, data, engineering, and compliance teams<br>• Prioritize AI use cases based on business value<br>• Develop enterprise AI maturity and workflow standards | Lack of technological oversight, inconsistent architecture, and breakdowns in Responsible AI principles such as transparency. |
+| **Product Owner for AI Workloads** | Owns the business outcome of AI solutions. | • Define problem statements and acceptance criteria<br>• Manage roadmap, budget, and stakeholder expectations<br>• Guide the AI solution lifecycle from ideation to deployment | Unclear vision, poor alignment with business objectives, low user adoption, and increased technical debt. |
+| **Business Domain Specialist** | Provides domain expertise required for model grounding, evaluation, and performance validation. | • Validate AI output accuracy within business context<br>• Provide labeled data and subject matter insights<br>• Identify operational pain points suitable for AI augmentation | Increased risk of inaccurate outputs and solutions that fail to meet business requirements. |
+| **Data Owner / Data Steward** | Ensures the quality, accessibility, and governance of organizational data powering AI workloads. | • Approve data access and safeguarding measures<br>• Oversee data inventory, classification, and lineage<br>• Ensure compliance with regulatory and organizational data policies | Poor data quality, governance gaps, and compliance risks. |
+| **Responsible AI / Compliance Officer** | Implements risk management, legal, and Responsible AI guardrails. | • Define ethical guidelines and governance frameworks<br>• Evaluate and mitigate model risk scenarios<br>• Monitor fairness, transparency, and safe operation of AI workloads | Increased bias, ethical concerns, regulatory risks, and non-compliance with Responsible AI principles. |
+| **Change Management & Skilling Lead** | Drives adoption by preparing employees for AI-enabled workflows. | • Define skilling plans mapped to workforce personas<br>• Develop adoption playbooks and onboarding materials<br>• Ensure organizational readiness and operational integration | Low adoption, poor change management, and failure to realize AI business value. |
+
+### AI Workload Technical Personas
+
+| Persona | Primary Responsibility |
+|----------|------------------------|
+| **AI Engineer** | Builds, tests, and evaluates AI workloads. |
+| **Data Scientist** | Develops and experiments with models and feature pipelines. |
+| **Data Engineer** | Prepares and orchestrates data assets for AI consumption. |
+| **Application Developer** | Integrates AI capabilities into applications and services. |
+| **MLOps / AIOps Engineer** | Manages deployment, automation, monitoring, and performance optimization. |
+
+### Quick Exam Rule
+
+| Role | Focus Area |
+|------|-----------|
+| Executive Sponsor | Strategy, Funding, Executive Support |
+| AI CoE Lead | Governance, Standards, Coordination |
+| Product Owner | Business Outcomes, Roadmap, Requirements |
+| Business Domain Specialist | Domain Expertise, Validation, Grounding |
+| Data Owner / Steward | Data Quality, Security, Compliance |
+| Responsible AI Officer | Ethics, Risk Management, Governance |
+| Change & Skilling Lead | Adoption, Training, Readiness |
+| AI Engineer | AI Solution Development |
+| Data Scientist | Model Creation & Optimization |
+| Data Engineer | Data Pipelines & Integration |
+| Application Developer | Application Integration |
+| MLOps / AIOps Engineer | Deployment, Monitoring, Operations |
