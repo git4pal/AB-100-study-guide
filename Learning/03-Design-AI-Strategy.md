@@ -18,7 +18,18 @@
 
 > **Outcome:** A unified approach combines Azure Cloud Adoption Framework guidance with agent lifecycle practices to ensure scalable, governed, and business-aligned AI adoption.
 
-# RACI Snapshot
+### Cloud Adoption Framework (CAF) for AI - Phase-by-Phase Guidance
+
+| Phase | Goals | Key Activities | Outputs / Deliverables | Architect Checklist |
+|---------|---------|---------|---------|---------|
+| **Strategy** | Define AI vision, business outcomes, and success criteria. Align AI investments with organizational objectives. | • Identify business problems and opportunities<br>• Define AI use cases<br>• Evaluate value potential and ROI<br>• Establish executive sponsorship<br>• Define Responsible AI objectives | • AI Strategy Document<br>• Business Case<br>• Success Metrics/KPIs<br>• Prioritized Use Case Backlog<br>• Executive Sponsorship Model | ☐ Business goals identified<br>☐ AI use cases documented<br>☐ KPIs defined<br>☐ ROI hypothesis created<br>☐ Executive sponsorship secured |
+| **Plan** | Translate strategy into an actionable adoption roadmap. | • Prioritize AI use cases<br>• Assess skill gaps and readiness<br>• Identify required resources<br>• Define implementation waves<br>• Create adoption roadmap | • AI Adoption Roadmap<br>• Skills Assessment<br>• Resource Plan<br>• Prioritized Portfolio<br>• Risk Assessment | ☐ Use cases prioritized<br>☐ Skills gaps assessed<br>☐ Budget estimated<br>☐ Roadmap approved<br>☐ Risks documented |
+| **Ready** | Establish the technical, security, governance, and data foundations required for AI workloads. | • Create landing zones<br>• Establish identity and access controls<br>• Configure networking and security<br>• Define governance policies<br>• Prepare data architecture | • AI Landing Zone<br>• Security Architecture<br>• Governance Framework<br>• Data Platform Design<br>• Compliance Controls | ☐ Landing zone deployed<br>☐ Security controls configured<br>☐ RBAC implemented<br>☒ Data sources identified<br>☐ Governance policies defined |
+| **Adopt** | Build, validate, and deploy AI solutions. | • Develop proof of concepts (POCs)<br>• Build pilots and MVPs<br>• Implement models, agents, and copilots<br>• Test business workflows<br>• Validate outcomes with users | • Proof of Concept (POC)<br>• Pilot Solution<br>• Production-Ready AI Application<br>• Evaluation Results<br>• Deployment Runbooks | ☐ POC completed<br>☐ User validation completed<br>☐ Security testing passed<br>☐ Production deployment approved<br>☐ Monitoring enabled |
+| **Govern** | Ensure AI solutions remain secure, compliant, and responsible throughout their lifecycle. | • Define AI policies<br>• Monitor Responsible AI compliance<br>• Manage access controls<br>• Implement audit processes<br>• Review regulatory requirements | • Governance Policies<br>• Responsible AI Controls<br>• Audit Reports<br>• Compliance Documentation<br>• Risk Register | ☐ Responsible AI controls implemented<br>☐ Audit trail available<br>☐ Compliance requirements met<br>☐ Data access governed<br>☐ Policy reviews scheduled |
+| **Manage** | Operate, monitor, optimize, and continuously improve AI solutions. | • Monitor performance and quality<br>• Track adoption and business metrics<br>• Manage incidents<br>• Optimize costs and models<br>• Continuously retrain and improve solutions | • Operational Dashboards<br>• Telemetry & Alerts<br>• Performance Reports<br>• Backlog of Improvements<br>• Optimization Recommendations | ☐ Monitoring configured<br>☐ KPIs tracked<br>☐ Usage analytics reviewed<br>☐ Cost optimization completed<br>☐ Continuous improvement process established |
+
+### RACI Snapshot
 
 | Activity | Solution Architect | Platform Team | Security & Compliance | Data/Knowledge Owner |
 |----------|-------------------|---------------|----------------------|----------------------|
