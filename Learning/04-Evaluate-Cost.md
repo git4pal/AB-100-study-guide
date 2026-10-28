@@ -116,6 +116,41 @@ Evaluate costs across five domains: Infrastructure, Development, Data Preparatio
 
 ## Decision Framework for Build vs. Buy vs. Extend
 
+### Build vs Buy vs Extend Decision Matrix
+
+| Approach | Best When | Key Benefits | Typical Scenarios |
+|-----------|-----------|-------------|-------------------|
+| **Build** | • Deep customization is required<br>• Control over data, IP, and model behavior is critical<br>• Business processes are unique and not supported by commercial tools<br>• Proprietary system integration is required | • Maximum flexibility<br>• Full control over architecture and AI behavior<br>• Supports unique business requirements<br>• Enables proprietary competitive advantages | • Custom AI agents<br>• Industry-specific AI solutions<br>• Proprietary business workflows<br>• Specialized predictive models |
+| **Buy** | • Time-to-value is the highest priority<br>• Internal engineering capacity is limited<br>• Business processes are standardized<br>• Reliability, vendor support, and continuous updates are required | • Fastest deployment<br>• Lower implementation risk<br>• Vendor-managed updates and maintenance<br>• Reduced development effort | • Microsoft 365 Copilot<br>• Dynamics 365 Copilot<br>• SaaS AI applications<br>• Prebuilt AI assistants |
+| **Extend** | • Both speed and customization are needed<br>• Existing AI platforms already provide most required capabilities<br>• Domain-specific knowledge must be added<br>• Agent or Copilot behavior requires tailoring | • Faster than building from scratch<br>• Leverages existing platform investments<br>• Reduces development complexity<br>• Supports business-specific customization | • Copilot Studio agents<br>• Microsoft 365 Copilot extensions<br>• Azure AI Foundry agents<br>• Plugins, skills, and grounding-based solutions |
+
+### Quick Comparison
+
+| Decision Factor | Build | Buy | Extend |
+|----------------|-------|-----|--------|
+| Time to Value | Slow | Fast | Medium |
+| Customization | Very High | Low | Medium-High |
+| Development Effort | High | Low | Medium |
+| Control over IP & Data | High | Low | Medium-High |
+| Operational Complexity | High | Low | Medium |
+| Integration Flexibility | High | Limited | High |
+| Cost to Implement | High | Low-Medium | Medium |
+| Best For | Unique business capabilities | Standardized business needs | Hybrid scenarios |
+
+### Exam Shortcut
+
+| Requirement | Recommended Option |
+|-------------|-------------------|
+| Need complete control | **Build** |
+| Need fastest deployment | **Buy** |
+| Need speed + customization | **Extend** |
+| Proprietary processes | **Build** |
+| Standard business functions | **Buy** |
+| Copilot customization | **Extend** |
+| Unique competitive advantage | **Build** |
+| Limited engineering resources | **Buy** |
+| Existing Microsoft ecosystem investment | **Extend** |
+
 ### Step-by-Step Architectural Flow
 
 1. Define business requirements and processes.
