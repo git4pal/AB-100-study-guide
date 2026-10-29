@@ -54,7 +54,6 @@ The modules below are grouped by the exam's Plan, Design, and Deploy domains. Th
 | [09 - Manage Testing](Learning/09-Manage-Testing.md) | Agent and model testing, validation criteria, prompt evaluation, and end-to-end scenarios | **Deploy:** Manage testing |
 | [10 - Design ALM Process](Learning/10-Design-ALM-Process.md) | ALM for AI data, Copilot Studio, Foundry agents, and custom models | **Deploy:** Design the ALM process |
 | [11 - Design Security and Governance](Learning/11-Design-Security-Governance.md) | Responsible AI, identity, data boundaries, governance, model security, and compliance | **Deploy:** Design responsible AI, security, governance, risk, and compliance |
-|
 
 For a concise review list, see [Things to Remember](Exam-Prep/Things-To-Remember.md).
 
