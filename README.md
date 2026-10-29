@@ -57,6 +57,7 @@ The modules below are grouped by the exam's Plan, Design, and Deploy domains. Th
 
 For a concise review list, see [Things to Remember](Exam-Prep/Things-To-Remember.md).
 
+
 ## Coverage Notes
 
 The chapters provide a starting point for each exam domain, but are community notes and may not cover every product-specific objective or current feature. Compare each module with Microsoft's detailed skills list, especially for:
